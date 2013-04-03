@@ -1,0 +1,3 @@
+The client build directory is here:
+    CocoaAsyncSocket/GCD/Xcode/SimpleHTTPClient/Mobile/iEmpire.xcodeproj
+
