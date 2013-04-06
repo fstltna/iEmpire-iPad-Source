@@ -48,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A518F11217109DA700BBCCC2 /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proto.h; sourceTree = "<group>"; };
 		A538AC051700EB4D000F43B9 /* MainStory-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "MainStory-iPad.storyboard"; sourceTree = "<group>"; };
 		A538ACB417010823000F43B9 /* TitleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleLogo.png; sourceTree = "<group>"; };
 		A538ACBA1701137D000F43B9 /* LoadPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadPage.png; sourceTree = "<group>"; };
@@ -209,6 +210,7 @@
 			children = (
 				A5A2846F1703490100C2DB01 /* MarqueeLabel.h */,
 				A5A284701703490100C2DB01 /* MarqueeLabel.m */,
+				A518F11217109DA700BBCCC2 /* proto.h */,
 				A538AD181702BDA7000F43B9 /* iVersion.h */,
 				A538AD191702BDA7000F43B9 /* iVersion.m */,
 				A538AD131702B5CC000F43B9 /* iRate.h */,
