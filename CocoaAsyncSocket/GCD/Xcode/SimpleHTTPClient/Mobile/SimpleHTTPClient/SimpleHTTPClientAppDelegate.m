@@ -5,6 +5,8 @@
 #import "DDTTYLogger.h"
 #import "DispatchQueueLogFormatter.h"
 #import "MediaPlayer/MediaPlayer.h"
+#import <AVFoundation/AVFoundation.h>
+#import <CoreAudio/CoreAudioTypes.h>
 
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -15,8 +17,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #define VALIDATE_SSL_CERTIFICATE 1
 
 #define READ_HEADER_LINE_BY_LINE 0
-
-//#define PLAY_MUSIC
 
 @implementation SimpleHTTPClientAppDelegate
 
@@ -119,15 +119,10 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     NSString * theiEmpireString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
     NSLog(@"retrieved response: %@", theiEmpireString);
 
-#ifdef PLAY_MUSIC
-    // Start Music
-    MPMusicPlayerController *musicPlayer;
-    musicPlayer=[MPMusicPlayerController applicationMusicPlayer];
-    [musicPlayer setShuffleMode: MPMusicShuffleModeOff];
-    [musicPlayer setRepeatMode: MPMusicRepeatModeNone];
-    [musicPlayer setQueueWithItemCollection: mediaItemCollection];
-    [musicPlayer play];
-#endif
+    // Play Theme Music
+    NSString *musicFile = [[NSBundle mainBundle] pathForResource:@"theme_song00" ofType:@"mp3"];
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:musicFile] error:nil];
+    [audioPlayer play];
     return YES;
 }
 
