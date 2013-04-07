@@ -4,6 +4,7 @@
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "DispatchQueueLogFormatter.h"
+#import "MediaPlayer/MediaPlayer.h"
 
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -15,6 +16,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #define READ_HEADER_LINE_BY_LINE 0
 
+//#define PLAY_MUSIC
 
 @implementation SimpleHTTPClientAppDelegate
 
@@ -116,7 +118,16 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     NSData *response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
     NSString * theiEmpireString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
     NSLog(@"retrieved response: %@", theiEmpireString);
-        
+
+#ifdef PLAY_MUSIC
+    // Start Music
+    MPMusicPlayerController *musicPlayer;
+    musicPlayer=[MPMusicPlayerController applicationMusicPlayer];
+    [musicPlayer setShuffleMode: MPMusicShuffleModeOff];
+    [musicPlayer setRepeatMode: MPMusicRepeatModeNone];
+    [musicPlayer setQueueWithItemCollection: mediaItemCollection];
+    [musicPlayer play];
+#endif
     return YES;
 }
 
