@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A518F1141710DAE300BBCCC2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1131710DAE300BBCCC2 /* CoreImage.framework */; };
+		A518F1161710DAF100BBCCC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1151710DAF100BBCCC2 /* AVFoundation.framework */; };
+		A518F1181710DAFE00BBCCC2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1171710DAFE00BBCCC2 /* MediaPlayer.framework */; };
+		A518F11D1710E65C00BBCCC2 /* theme_song00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A518F1191710E65C00BBCCC2 /* theme_song00.mp3 */; };
+		A518F11E1710E65C00BBCCC2 /* theme_song01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A518F11A1710E65C00BBCCC2 /* theme_song01.mp3 */; };
+		A518F11F1710E65C00BBCCC2 /* theme_song02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A518F11B1710E65C00BBCCC2 /* theme_song02.mp3 */; };
+		A518F1201710E65C00BBCCC2 /* theme_song03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A518F11C1710E65C00BBCCC2 /* theme_song03.mp3 */; };
 		A538AC061700EB4D000F43B9 /* MainStory-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A538AC051700EB4D000F43B9 /* MainStory-iPad.storyboard */; };
 		A538ACB517010823000F43B9 /* TitleLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A538ACB417010823000F43B9 /* TitleLogo.png */; };
 		A538ACBB1701137D000F43B9 /* LoadPage.png in Resources */ = {isa = PBXBuildFile; fileRef = A538ACBA1701137D000F43B9 /* LoadPage.png */; };
@@ -49,6 +56,13 @@
 
 /* Begin PBXFileReference section */
 		A518F11217109DA700BBCCC2 /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proto.h; sourceTree = "<group>"; };
+		A518F1131710DAE300BBCCC2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		A518F1151710DAF100BBCCC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A518F1171710DAFE00BBCCC2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A518F1191710E65C00BBCCC2 /* theme_song00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme_song00.mp3; sourceTree = "<group>"; };
+		A518F11A1710E65C00BBCCC2 /* theme_song01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme_song01.mp3; sourceTree = "<group>"; };
+		A518F11B1710E65C00BBCCC2 /* theme_song02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme_song02.mp3; sourceTree = "<group>"; };
+		A518F11C1710E65C00BBCCC2 /* theme_song03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme_song03.mp3; sourceTree = "<group>"; };
 		A538AC051700EB4D000F43B9 /* MainStory-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "MainStory-iPad.storyboard"; sourceTree = "<group>"; };
 		A538ACB417010823000F43B9 /* TitleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleLogo.png; sourceTree = "<group>"; };
 		A538ACBA1701137D000F43B9 /* LoadPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadPage.png; sourceTree = "<group>"; };
@@ -110,6 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A518F1181710DAFE00BBCCC2 /* MediaPlayer.framework in Frameworks */,
+				A518F1161710DAF100BBCCC2 /* AVFoundation.framework in Frameworks */,
+				A518F1141710DAE300BBCCC2 /* CoreImage.framework in Frameworks */,
 				A538AD171702B67D000F43B9 /* StoreKit.framework in Frameworks */,
 				A5A284D0170356E700C2DB01 /* AdSupport.framework in Frameworks */,
 				A538AD2A17033CFE000F43B9 /* SystemConfiguration.framework in Frameworks */,
@@ -177,6 +194,9 @@
 		DC80CA3713C3B43F00D29D06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A518F1171710DAFE00BBCCC2 /* MediaPlayer.framework */,
+				A518F1151710DAF100BBCCC2 /* AVFoundation.framework */,
+				A518F1131710DAE300BBCCC2 /* CoreImage.framework */,
 				A5A284CF170356E700C2DB01 /* AdSupport.framework */,
 				A538AD2917033CFE000F43B9 /* SystemConfiguration.framework */,
 				A538AD1E1702D258000F43B9 /* QuartzCore.framework */,
@@ -208,6 +228,10 @@
 		DC80CA3F13C3B43F00D29D06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A518F1191710E65C00BBCCC2 /* theme_song00.mp3 */,
+				A518F11A1710E65C00BBCCC2 /* theme_song01.mp3 */,
+				A518F11B1710E65C00BBCCC2 /* theme_song02.mp3 */,
+				A518F11C1710E65C00BBCCC2 /* theme_song03.mp3 */,
 				A5A2846F1703490100C2DB01 /* MarqueeLabel.h */,
 				A5A284701703490100C2DB01 /* MarqueeLabel.m */,
 				A518F11217109DA700BBCCC2 /* proto.h */,
@@ -316,6 +340,10 @@
 				A538ACBD170113CD000F43B9 /* Default-Portrait@2x~ipad.png in Resources */,
 				A538ACBF1701160E000F43B9 /* LoadPage-retina.png in Resources */,
 				A538AD0F17027CCC000F43B9 /* blue-neon-cityscape.png in Resources */,
+				A518F11D1710E65C00BBCCC2 /* theme_song00.mp3 in Resources */,
+				A518F11E1710E65C00BBCCC2 /* theme_song01.mp3 in Resources */,
+				A518F11F1710E65C00BBCCC2 /* theme_song02.mp3 in Resources */,
+				A518F1201710E65C00BBCCC2 /* theme_song03.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
