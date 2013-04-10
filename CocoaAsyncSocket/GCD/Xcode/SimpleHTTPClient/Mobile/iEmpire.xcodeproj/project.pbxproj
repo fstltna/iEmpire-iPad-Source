@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7678CF451714FB9E005ED101 /* IEServersSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF441714FB9E005ED101 /* IEServersSearchViewController.m */; };
+		7678CF481714FBBF005ED101 /* IEGamePlayScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF471714FBBF005ED101 /* IEGamePlayScreenViewController.m */; };
+		7678CF4B1714FBD4005ED101 /* IEMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF4A1714FBD4005ED101 /* IEMainMenuViewController.m */; };
 		A518F1141710DAE300BBCCC2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1131710DAE300BBCCC2 /* CoreImage.framework */; };
 		A518F1161710DAF100BBCCC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1151710DAF100BBCCC2 /* AVFoundation.framework */; };
 		A518F1181710DAFE00BBCCC2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1171710DAFE00BBCCC2 /* MediaPlayer.framework */; };
@@ -56,6 +59,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7678CF431714FB9E005ED101 /* IEServersSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEServersSearchViewController.h; sourceTree = "<group>"; };
+		7678CF441714FB9E005ED101 /* IEServersSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEServersSearchViewController.m; sourceTree = "<group>"; };
+		7678CF461714FBBF005ED101 /* IEGamePlayScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEGamePlayScreenViewController.h; sourceTree = "<group>"; };
+		7678CF471714FBBF005ED101 /* IEGamePlayScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEGamePlayScreenViewController.m; sourceTree = "<group>"; };
+		7678CF491714FBD4005ED101 /* IEMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMainMenuViewController.h; sourceTree = "<group>"; };
+		7678CF4A1714FBD4005ED101 /* IEMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEMainMenuViewController.m; sourceTree = "<group>"; };
 		A518F11217109DA700BBCCC2 /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proto.h; sourceTree = "<group>"; };
 		A518F1131710DAE300BBCCC2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		A518F1151710DAF100BBCCC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -145,11 +154,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A59F3DC016EB595200E11CC9 /* iPad */ = {
+		7678CF3F1714FB41005ED101 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7678CF421714FB77005ED101 /* ServersSearch */,
+				7678CF411714FB5E005ED101 /* GamePlayScreen */,
+				7678CF401714FB56005ED101 /* MainMenu */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7678CF401714FB56005ED101 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7678CF491714FBD4005ED101 /* IEMainMenuViewController.h */,
+				7678CF4A1714FBD4005ED101 /* IEMainMenuViewController.m */,
+			);
+			name = MainMenu;
+			sourceTree = "<group>";
+		};
+		7678CF411714FB5E005ED101 /* GamePlayScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7678CF461714FBBF005ED101 /* IEGamePlayScreenViewController.h */,
+				7678CF471714FBBF005ED101 /* IEGamePlayScreenViewController.m */,
+			);
+			name = GamePlayScreen;
+			sourceTree = "<group>";
+		};
+		7678CF421714FB77005ED101 /* ServersSearch */ = {
+			isa = PBXGroup;
+			children = (
+				7678CF431714FB9E005ED101 /* IEServersSearchViewController.h */,
+				7678CF441714FB9E005ED101 /* IEServersSearchViewController.m */,
+			);
+			name = ServersSearch;
+			sourceTree = "<group>";
+		};
+		7678CF4C1714FC15005ED101 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				A59F3DC116EB595C00E11CC9 /* MainWindow-iPad.xib */,
 				A538AC051700EB4D000F43B9 /* MainStory-iPad.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A59F3DC016EB595200E11CC9 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				7678CF4C1714FC15005ED101 /* Resources */,
+				7678CF3F1714FB41005ED101 /* Controllers */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -372,6 +427,9 @@
 				A538AD151702B5CC000F43B9 /* iRate.m in Sources */,
 				A538AD1A1702BDA7000F43B9 /* iVersion.m in Sources */,
 				A5A284711703490100C2DB01 /* MarqueeLabel.m in Sources */,
+				7678CF451714FB9E005ED101 /* IEServersSearchViewController.m in Sources */,
+				7678CF481714FBBF005ED101 /* IEGamePlayScreenViewController.m in Sources */,
+				7678CF4B1714FBD4005ED101 /* IEMainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
