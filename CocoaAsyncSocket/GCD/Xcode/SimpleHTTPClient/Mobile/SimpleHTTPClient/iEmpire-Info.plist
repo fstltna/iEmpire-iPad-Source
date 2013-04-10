@@ -42,8 +42,6 @@
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMainNibFile</key>
-	<string>MainWindow</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>MainStory-iPad</string>
 	<key>UISupportedInterfaceOrientations</key>
