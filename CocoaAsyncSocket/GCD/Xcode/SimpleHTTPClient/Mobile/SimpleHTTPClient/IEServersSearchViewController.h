@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IEServersSearchViewController : UIViewController
+@interface IEServersSearchViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+- (IBAction)connectPressed:(id)sender;
 
 @end
