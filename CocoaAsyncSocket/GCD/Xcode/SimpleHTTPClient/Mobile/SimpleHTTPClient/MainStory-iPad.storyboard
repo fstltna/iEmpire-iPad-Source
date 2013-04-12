@@ -22,15 +22,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzs-zQ-uuP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzs-zQ-uuP">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Twitter">
+                                <state key="normal" image="twitterBtn.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tweetTapped:" destination="pd5-Cg-FyF" eventType="touchUpInside" id="aGd-Zz-b6P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5b-RL-7hH">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -50,11 +53,11 @@
                         <constraints>
                             <constraint firstItem="MMc-dn-imW" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" type="default" id="B19-ur-1qm"/>
                             <constraint firstItem="MMc-dn-imW" firstAttribute="top" secondItem="sbY-tL-gzQ" secondAttribute="top" type="default" id="ORO-2s-JDB"/>
-                            <constraint firstItem="Xzs-zQ-uuP" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" constant="205" id="UZH-WD-8tU"/>
+                            <constraint firstAttribute="bottom" secondItem="Yxf-af-Efd" secondAttribute="bottom" constant="142" id="Syu-BB-1Xy"/>
                             <constraint firstItem="Yxf-af-Efd" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" constant="40" id="VfS-2c-oVW"/>
-                            <constraint firstAttribute="bottom" secondItem="Xzs-zQ-uuP" secondAttribute="bottom" constant="130" id="XYr-hJ-M9x"/>
+                            <constraint firstAttribute="bottom" secondItem="Xzs-zQ-uuP" secondAttribute="bottom" constant="135" id="clz-xf-BRb"/>
                             <constraint firstItem="J5b-RL-7hH" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" constant="343" id="cpW-v5-3bD"/>
-                            <constraint firstItem="Xzs-zQ-uuP" firstAttribute="top" secondItem="Yxf-af-Efd" secondAttribute="top" type="default" id="hCH-ZC-wsz"/>
+                            <constraint firstItem="Xzs-zQ-uuP" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" constant="206" id="ffR-sA-ngv"/>
                             <constraint firstItem="J5b-RL-7hH" firstAttribute="top" secondItem="sbY-tL-gzQ" secondAttribute="top" constant="436" id="koh-l3-k2k"/>
                         </constraints>
                     </view>
@@ -342,6 +345,7 @@
     <resources>
         <image name="LoadPage.png" width="768" height="1004"/>
         <image name="blue-neon-cityscape.png" width="768" height="1024"/>
+        <image name="twitterBtn.png" width="75" height="75"/>
     </resources>
     <classes>
         <class className="IEGamePlayScreenViewController" superclassName="UIViewController">
@@ -349,6 +353,9 @@
         </class>
         <class className="IEMainMenuViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IEMainMenuViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tweetTapped:"/>
+            </relationships>
         </class>
         <class className="IEServersSearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IEServersSearchViewController.h"/>
@@ -361,9 +368,6 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="NSMutableArray" superclassName="NSArray">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
-        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
@@ -371,6 +375,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="u5d-f7-XAF"/>
+        <segue reference="RVU-YE-Eeh"/>
     </inferredMetricsTieBreakers>
 </document>

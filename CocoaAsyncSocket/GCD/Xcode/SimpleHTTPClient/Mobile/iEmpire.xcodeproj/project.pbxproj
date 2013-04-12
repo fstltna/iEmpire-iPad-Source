@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		765E86DF17185CC300D755E2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765E86DE17185CC300D755E2 /* Social.framework */; };
+		765E86E717185F0800D755E2 /* twitterBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 765E86E517185F0800D755E2 /* twitterBtn.png */; };
+		765E86E817185F0800D755E2 /* twitterBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 765E86E617185F0800D755E2 /* twitterBtn@2x.png */; };
 		7678CF451714FB9E005ED101 /* IEServersSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF441714FB9E005ED101 /* IEServersSearchViewController.m */; };
 		7678CF481714FBBF005ED101 /* IEGamePlayScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF471714FBBF005ED101 /* IEGamePlayScreenViewController.m */; };
 		7678CF4B1714FBD4005ED101 /* IEMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF4A1714FBD4005ED101 /* IEMainMenuViewController.m */; };
@@ -59,6 +62,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		765E86DC17185C5A00D755E2 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		765E86DE17185CC300D755E2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		765E86E517185F0800D755E2 /* twitterBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterBtn.png; sourceTree = "<group>"; };
+		765E86E617185F0800D755E2 /* twitterBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterBtn@2x.png"; sourceTree = "<group>"; };
 		7678CF431714FB9E005ED101 /* IEServersSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEServersSearchViewController.h; sourceTree = "<group>"; };
 		7678CF441714FB9E005ED101 /* IEServersSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEServersSearchViewController.m; sourceTree = "<group>"; };
 		7678CF461714FBBF005ED101 /* IEGamePlayScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEGamePlayScreenViewController.h; sourceTree = "<group>"; };
@@ -135,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				765E86DF17185CC300D755E2 /* Social.framework in Frameworks */,
 				A518F1531710F70A00BBCCC2 /* CoreAudio.framework in Frameworks */,
 				A518F1181710DAFE00BBCCC2 /* MediaPlayer.framework in Frameworks */,
 				A518F1161710DAF100BBCCC2 /* AVFoundation.framework in Frameworks */,
@@ -154,6 +162,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		765E86E017185E2F00D755E2 /* Twitter Images */ = {
+			isa = PBXGroup;
+			children = (
+				765E86E517185F0800D755E2 /* twitterBtn.png */,
+				765E86E617185F0800D755E2 /* twitterBtn@2x.png */,
+			);
+			name = "Twitter Images";
+			sourceTree = "<group>";
+		};
 		7678CF3F1714FB41005ED101 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +211,7 @@
 		7678CF4C1714FC15005ED101 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				765E86E017185E2F00D755E2 /* Twitter Images */,
 				A59F3DC116EB595C00E11CC9 /* MainWindow-iPad.xib */,
 				A538AC051700EB4D000F43B9 /* MainStory-iPad.storyboard */,
 			);
@@ -225,6 +243,8 @@
 		DC80CA2913C3B43F00D29D06 = {
 			isa = PBXGroup;
 			children = (
+				765E86DE17185CC300D755E2 /* Social.framework */,
+				765E86DC17185C5A00D755E2 /* Twitter.framework */,
 				A518F1521710F70A00BBCCC2 /* CoreAudio.framework */,
 				A538ACBC170113CD000F43B9 /* Default-Portrait@2x~ipad.png */,
 				A59F3DCE16EBB79900E11CC9 /* Default-Portrait~ipad.png */,
@@ -403,6 +423,8 @@
 				A518F11E1710E65C00BBCCC2 /* theme_song01.mp3 in Resources */,
 				A518F11F1710E65C00BBCCC2 /* theme_song02.mp3 in Resources */,
 				A518F1201710E65C00BBCCC2 /* theme_song03.mp3 in Resources */,
+				765E86E717185F0800D755E2 /* twitterBtn.png in Resources */,
+				765E86E817185F0800D755E2 /* twitterBtn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

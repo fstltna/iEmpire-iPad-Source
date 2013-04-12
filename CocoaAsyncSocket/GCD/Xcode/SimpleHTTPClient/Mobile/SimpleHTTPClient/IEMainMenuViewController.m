@@ -7,9 +7,11 @@
 //
 
 #import "IEMainMenuViewController.h"
+#import <Twitter/Twitter.h>
 
 @interface IEMainMenuViewController ()
 
+-(IBAction)tweetTapped:(id)sender;
 @end
 
 @implementation IEMainMenuViewController
@@ -46,5 +48,31 @@
     
 }
 #pragma mark-
+
+#pragma mark Twitter Button
+-(IBAction)tweetTapped:(id)sender{
+    
+    NSString *tweetStr = @"Testing Twitter Tweet";
+    NSString *errorMessage = @"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup";
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet setInitialText:tweetStr];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:errorMessage
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }    
+}
+
+#pragma mark -
 
 @end
