@@ -52,7 +52,7 @@
 #pragma mark Twitter Button
 -(IBAction)tweetTapped:(id)sender{
     
-    NSString *tweetStr = @"Testing Twitter Tweet";
+    NSString *tweetStr = @"I love playing Empire using iEmpire - Give it a try! http://empiredirectory.net/iempire";
     NSString *errorMessage = @"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup";
     
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
