@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pd5-Cg-FyF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pd5-Cg-FyF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -53,11 +53,11 @@
                         <constraints>
                             <constraint firstItem="MMc-dn-imW" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" type="default" id="B19-ur-1qm"/>
                             <constraint firstItem="MMc-dn-imW" firstAttribute="top" secondItem="sbY-tL-gzQ" secondAttribute="top" type="default" id="ORO-2s-JDB"/>
+                            <constraint firstItem="Xzs-zQ-uuP" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" constant="208" id="PN9-7W-lBD"/>
                             <constraint firstAttribute="bottom" secondItem="Yxf-af-Efd" secondAttribute="bottom" constant="142" id="Syu-BB-1Xy"/>
                             <constraint firstItem="Yxf-af-Efd" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" constant="40" id="VfS-2c-oVW"/>
-                            <constraint firstAttribute="bottom" secondItem="Xzs-zQ-uuP" secondAttribute="bottom" constant="135" id="clz-xf-BRb"/>
+                            <constraint firstAttribute="bottom" secondItem="Xzs-zQ-uuP" secondAttribute="bottom" constant="134" id="cIZ-Mz-uZg"/>
                             <constraint firstItem="J5b-RL-7hH" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" constant="343" id="cpW-v5-3bD"/>
-                            <constraint firstItem="Xzs-zQ-uuP" firstAttribute="leading" secondItem="sbY-tL-gzQ" secondAttribute="leading" constant="206" id="ffR-sA-ngv"/>
                             <constraint firstItem="J5b-RL-7hH" firstAttribute="top" secondItem="sbY-tL-gzQ" secondAttribute="top" constant="436" id="koh-l3-k2k"/>
                         </constraints>
                     </view>
