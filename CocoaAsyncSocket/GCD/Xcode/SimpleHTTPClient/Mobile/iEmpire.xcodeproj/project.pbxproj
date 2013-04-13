@@ -32,6 +32,7 @@
 		A538AD1A1702BDA7000F43B9 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A538AD191702BDA7000F43B9 /* iVersion.m */; };
 		A538AD1F1702D258000F43B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538AD1E1702D258000F43B9 /* QuartzCore.framework */; };
 		A538AD2A17033CFE000F43B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538AD2917033CFE000F43B9 /* SystemConfiguration.framework */; };
+		A59508661716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A59508641716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld */; };
 		A59F3DC316EB595C00E11CC9 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59F3DC116EB595C00E11CC9 /* MainWindow-iPad.xib */; };
 		A59F3DC916EB68C500E11CC9 /* Icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = A59F3DC816EB68C500E11CC9 /* Icon_144x144.png */; };
 		A59F3DCB16EB68D600E11CC9 /* Icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = A59F3DCA16EB68D600E11CC9 /* Icon_72x72.png */; };
@@ -94,6 +95,7 @@
 		A538AD191702BDA7000F43B9 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		A538AD1E1702D258000F43B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A538AD2917033CFE000F43B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A59508651716C1B000BF2199 /* iEmpireDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iEmpireDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A59F3DC216EB595C00E11CC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		A59F3DC816EB68C500E11CC9 /* Icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_144x144.png; sourceTree = "<group>"; };
 		A59F3DCA16EB68D600E11CC9 /* Icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_72x72.png; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 		DC80CA3713C3B43F00D29D06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A518F1521710F70A00BBCCC2 /* CoreAudio.framework */,
 				A518F1171710DAFE00BBCCC2 /* MediaPlayer.framework */,
 				A518F1151710DAF100BBCCC2 /* AVFoundation.framework */,
 				A518F1131710DAE300BBCCC2 /* CoreImage.framework */,
@@ -300,6 +303,7 @@
 				DC80CA4E13C3B43F00D29D06 /* SimpleHTTPClientViewController.m */,
 				DC80CA5013C3B43F00D29D06 /* SimpleHTTPClientViewController.xib */,
 				DC80CA3F13C3B43F00D29D06 /* Supporting Files */,
+				A59508641716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld */,
 			);
 			path = SimpleHTTPClient;
 			sourceTree = "<group>";
@@ -452,6 +456,7 @@
 				7678CF451714FB9E005ED101 /* IEServersSearchViewController.m in Sources */,
 				7678CF481714FBBF005ED101 /* IEGamePlayScreenViewController.m in Sources */,
 				7678CF4B1714FBD4005ED101 /* IEMainMenuViewController.m in Sources */,
+				A59508661716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +600,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A59508641716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A59508651716C1B000BF2199 /* iEmpireDataModel.xcdatamodel */,
+			);
+			currentVersion = A59508651716C1B000BF2199 /* iEmpireDataModel.xcdatamodel */;
+			path = iEmpireDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DC80CA2B13C3B43F00D29D06 /* Project object */;
 }
