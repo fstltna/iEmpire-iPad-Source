@@ -32,6 +32,7 @@
 		A538AD1A1702BDA7000F43B9 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A538AD191702BDA7000F43B9 /* iVersion.m */; };
 		A538AD1F1702D258000F43B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538AD1E1702D258000F43B9 /* QuartzCore.framework */; };
 		A538AD2A17033CFE000F43B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538AD2917033CFE000F43B9 /* SystemConfiguration.framework */; };
+		A575A68B171BEED900911E52 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A575A68A171BEED900911E52 /* Settings.bundle */; };
 		A59508661716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A59508641716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld */; };
 		A59F3DC316EB595C00E11CC9 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59F3DC116EB595C00E11CC9 /* MainWindow-iPad.xib */; };
 		A59F3DC916EB68C500E11CC9 /* Icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = A59F3DC816EB68C500E11CC9 /* Icon_144x144.png */; };
@@ -98,6 +99,7 @@
 		A538AD191702BDA7000F43B9 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		A538AD1E1702D258000F43B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A538AD2917033CFE000F43B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A575A68A171BEED900911E52 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A59508651716C1B000BF2199 /* iEmpireDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iEmpireDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A59F3DC216EB595C00E11CC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		A59F3DC816EB68C500E11CC9 /* Icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_144x144.png; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				DC80CA4713C3B43F00D29D06 /* SimpleHTTPClientAppDelegate.h */,
 				DC80CA4813C3B43F00D29D06 /* SimpleHTTPClientAppDelegate.m */,
 				DC80CA4A13C3B43F00D29D06 /* MainWindow.xib */,
+				A575A68A171BEED900911E52 /* Settings.bundle */,
 				DC80CA4D13C3B43F00D29D06 /* SimpleHTTPClientViewController.h */,
 				DC80CA4E13C3B43F00D29D06 /* SimpleHTTPClientViewController.m */,
 				DC80CA5013C3B43F00D29D06 /* SimpleHTTPClientViewController.xib */,
@@ -441,6 +444,7 @@
 				A5DE66651718FD8A003ADAC4 /* twitterBtn.png in Resources */,
 				A5DE66661718FD8A003ADAC4 /* twitterBtn@2x.png in Resources */,
 				A5DE66681718FE82003ADAC4 /* Credits_Screen.png in Resources */,
+				A575A68B171BEED900911E52 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
