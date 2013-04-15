@@ -101,6 +101,7 @@
 		A538AD2917033CFE000F43B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A575A68A171BEED900911E52 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A59508651716C1B000BF2199 /* iEmpireDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iEmpireDataModel.xcdatamodel; sourceTree = "<group>"; };
+		A59C7A10171BF5170076383A /* GlobalsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalsHeader.h; sourceTree = "<group>"; };
 		A59F3DC216EB595C00E11CC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		A59F3DC816EB68C500E11CC9 /* Icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_144x144.png; sourceTree = "<group>"; };
 		A59F3DCA16EB68D600E11CC9 /* Icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_72x72.png; sourceTree = "<group>"; };
@@ -339,6 +340,7 @@
 				DC80CA4113C3B43F00D29D06 /* InfoPlist.strings */,
 				DC80CA4413C3B43F00D29D06 /* iEmpire-Prefix.pch */,
 				DC80CA4513C3B43F00D29D06 /* main.m */,
+				A59C7A10171BF5170076383A /* GlobalsHeader.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

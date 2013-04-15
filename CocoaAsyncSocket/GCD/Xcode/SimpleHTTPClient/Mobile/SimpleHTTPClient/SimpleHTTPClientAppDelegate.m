@@ -7,6 +7,7 @@
 #import "MediaPlayer/MediaPlayer.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
+#import "GlobalsHeader.h"
 
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -25,6 +26,33 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Load in preferences
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	WantMusic = [userDefaults boolForKey: @"music_preference"];
+	WantNews = [userDefaults boolForKey: @"news_preference"];
+
+    if(WantNews)
+    {
+        // Get  latest news
+        NSString *FeedURL=@"http://empiredirectory.net/iempirenews.txt";
+        NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:FeedURL]];
+        NSURLResponse *resp = nil;
+        NSError *err = nil;
+        NSData *response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
+        NSString * theiEmpireString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+        NSLog(@"retrieved response: %@", theiEmpireString);
+    }
+    
+    if(WantMusic)
+    {
+        // Play Theme Music
+        NSString *musicFile = [[NSBundle mainBundle] pathForResource:@"theme_song00" ofType:@"mp3"];
+        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:musicFile] error:nil];
+        [audioPlayer play];
+    }
+    
+    
+    
 	// AsyncSocket optionally uses the Lumberjack logging framework.
 	//
 	// Lumberjack is a professional logging framework. It's extremely fast and flexible.
@@ -91,7 +119,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	// The error message might be something like "Attempting to connect without a delegate. Set a delegate first."
 	//
 	// When the asynchronous sockets connects, it will invoke the socket:didConnectToHost:port: delegate method.
-	
+
 	NSError *error = nil;
 	NSString *host = HOST;
 	
@@ -110,19 +138,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	
 	//self.window.rootViewController = self.viewController;
 	//[self.window makeKeyAndVisible];
-    // Get  latest news
-    NSString *FeedURL=@"http://empiredirectory.net/iempirenews.txt";
-    NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:FeedURL]];
-    NSURLResponse *resp = nil;
-    NSError *err = nil;
-    NSData *response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
-    NSString * theiEmpireString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-    NSLog(@"retrieved response: %@", theiEmpireString);
-
-    // Play Theme Music
-    NSString *musicFile = [[NSBundle mainBundle] pathForResource:@"theme_song00" ofType:@"mp3"];
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:musicFile] error:nil];
-    [audioPlayer play];
     return YES;
 }
 
