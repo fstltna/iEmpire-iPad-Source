@@ -31,6 +31,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	WantMusic = [userDefaults boolForKey: @"music_preference"];
 	WantNews = [userDefaults boolForKey: @"news_preference"];
 
+    // Do they want us to get news?
     if(WantNews)
     {
         // Get  latest news
@@ -42,13 +43,25 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         NSString * theiEmpireString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
         NSLog(@"retrieved response: %@", theiEmpireString);
     }
-    
+    else
+    {
+        NSString * theiEmpireString = @"(c) Copyright 2013 - Pocketfiction.com";
+        NSLog(@"using default news: %@", theiEmpireString);
+    }
+    // Put Label Update Code Here
+
+    // Do they want music played?
+    NSString *musicFile = [[NSBundle mainBundle] pathForResource:@"theme_song00" ofType:@"mp3"];
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:musicFile] error:nil];
     if(WantMusic)
     {
         // Play Theme Music
-        NSString *musicFile = [[NSBundle mainBundle] pathForResource:@"theme_song00" ofType:@"mp3"];
-        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:musicFile] error:nil];
         [audioPlayer play];
+    }
+    else
+    {
+        // Stop theme music
+        [audioPlayer stop];
     }
     
     
