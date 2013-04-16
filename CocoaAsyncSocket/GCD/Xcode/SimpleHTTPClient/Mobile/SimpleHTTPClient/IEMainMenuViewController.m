@@ -8,8 +8,11 @@
 
 #import "IEMainMenuViewController.h"
 #import <Twitter/Twitter.h>
+#import "GlobalsHeader.h"
 
 @interface IEMainMenuViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextView *newsLabel;
 
 -(IBAction)tweetTapped:(id)sender;
 @end
@@ -30,6 +33,25 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSLog(@"In MainMenu");
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    WantNews = [userDefaults boolForKey:@"news_preference"];
+    
+    NSString * theiEmpireString = @"(c) Copyright 2013 - Pocketfiction.com";
+    if(WantNews)
+    {
+        // Get  latest news
+        NSString *FeedURL=@"http://empiredirectory.net/iempirenews.txt";
+        NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:FeedURL]];
+        NSURLResponse *resp = nil;
+        NSError *err = nil;
+        NSData *response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
+        theiEmpireString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+        NSLog(@"retrieved response: %@", theiEmpireString);
+    }
+    
+    // Put Label Update Code Here
+    [_newsLabel setText:theiEmpireString];
 }
 
 - (void)didReceiveMemoryWarning

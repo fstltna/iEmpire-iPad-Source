@@ -27,33 +27,14 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     // Load in preferences
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"YES"
-                                                            forKey:@"music_preference"];
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:@"YES",@"music_preference",
+                                                                           @"YES",@"news_preference", nil];
+                                 
     [userDefaults registerDefaults:appDefaults];
     [userDefaults synchronize];
     
 	WantMusic = [userDefaults boolForKey: @"music_preference"];
-	WantNews = [userDefaults boolForKey: @"news_preference"];
-
-    // Do they want us to get news?
-    if(WantNews)
-    {
-        // Get  latest news
-        NSString *FeedURL=@"http://empiredirectory.net/iempirenews.txt";
-        NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:FeedURL]];
-        NSURLResponse *resp = nil;
-        NSError *err = nil;
-        NSData *response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
-        NSString * theiEmpireString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-        NSLog(@"retrieved response: %@", theiEmpireString);
-    }
-    else
-    {
-        NSString * theiEmpireString = @"(c) Copyright 2013 - Pocketfiction.com";
-        NSLog(@"using default news: %@", theiEmpireString);
-    }
-    // Put Label Update Code Here
-
+    
     // Do they want music played?
     NSString *musicFile = [[NSBundle mainBundle] pathForResource:@"theme_song00" ofType:@"mp3"];
     NSError *musicError = nil;

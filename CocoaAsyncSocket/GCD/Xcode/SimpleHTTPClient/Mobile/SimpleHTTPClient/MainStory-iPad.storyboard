@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pd5-Cg-FyF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pd5-Cg-FyF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -77,6 +77,9 @@
                             <constraint firstAttribute="bottom" secondItem="YZL-dA-pbB" secondAttribute="bottom" constant="136" id="ygl-mB-xvB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newsLabel" destination="YZL-dA-pbB" id="v7Z-yT-TrN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfw-ME-5kW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -408,6 +411,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IEMainMenuViewController.h"/>
             <relationships>
                 <relationship kind="action" name="tweetTapped:"/>
+                <relationship kind="outlet" name="newsLabel" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="IEServersSearchViewController" superclassName="UIViewController">
