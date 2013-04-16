@@ -4,8 +4,7 @@
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "DispatchQueueLogFormatter.h"
-#import "MediaPlayer/MediaPlayer.h"
-#import <AVFoundation/AVFoundation.h>
+
 #import <CoreAudio/CoreAudioTypes.h>
 #import "GlobalsHeader.h"
 
@@ -28,6 +27,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     // Load in preferences
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"YES"
+                                                            forKey:@"music_preference"];
+    [userDefaults registerDefaults:appDefaults];
+    [userDefaults synchronize];
+    
 	WantMusic = [userDefaults boolForKey: @"music_preference"];
 	WantNews = [userDefaults boolForKey: @"news_preference"];
 
@@ -52,17 +56,35 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     // Do they want music played?
     NSString *musicFile = [[NSBundle mainBundle] pathForResource:@"theme_song00" ofType:@"mp3"];
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:musicFile] error:nil];
-    if(WantMusic)
-    {
-        // Play Theme Music
-        [audioPlayer play];
+    NSError *musicError = nil;
+    
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
+    AVAudioPlayer *audioP = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:musicFile] error:&musicError];
+    audioPlayer.delegate = self;
+    
+    audioPlayer = audioP;
+    [audioPlayer prepareToPlay];
+    
+    if (!musicError && audioPlayer) {
+
+        if(WantMusic)
+        {
+            // Play Theme Music
+            NSLog(@"will try to play audio");
+            [audioPlayer play];
+        }
+        else
+        {
+            // Stop theme music
+            [audioPlayer stop];
+        }
     }
-    else
-    {
-        // Stop theme music
-        [audioPlayer stop];
+    else{
+    
+        NSLog(@"error while trying to play music is %@", [musicError debugDescription]);
     }
+
     
     
     
