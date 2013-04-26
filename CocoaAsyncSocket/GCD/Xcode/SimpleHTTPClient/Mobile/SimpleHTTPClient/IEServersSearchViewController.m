@@ -8,6 +8,8 @@
 
 #import "IEServersSearchViewController.h"
 #import "IEGamePlayScreenViewController.h"
+#import "IEServersStore.h"
+#import "IEServerObject.h"
 
 @interface IEServersSearchViewController ()
 
@@ -39,10 +41,15 @@
     [self.searchResults addGestureRecognizer:reco];
     _longReco = reco;
     
-    _searchItems = [NSMutableArray array];
+    _searchItems =  [NSMutableArray array];
     _searchResults.delegate = self;
     _searchResults.dataSource = self;
     _searchResults.bounces = NO;
+    
+    IEServersStore *serverStore = [IEServersStore sharedServersStore];
+    if ([[serverStore serversList] count]) {
+        _searchItems = [[serverStore serversList] copy];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,10 +99,14 @@
     static NSString *CellIdentifier = @"Cell";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    NSString *text = [NSString stringWithFormat:@"%@",[self.searchItems objectAtIndex:[indexPath row]]];
-	cell.textLabel.text = text;
+
+    //NSString *text = [NSString stringWithFormat:@"%@",[self.searchItems objectAtIndex:[indexPath row]]];
+    IEServerObject *serverObj = [self.searchItems objectAtIndex:indexPath.row];
+	cell.textLabel.text = serverObj.serverName;
+    [cell.detailTextLabel setText:serverObj.country];
+    
     return cell;
 }
 
@@ -142,14 +153,31 @@
 
 - (IBAction)connectPressed:(id)sender {
 
-    //generating random number
-    //fillin the searchItems with that
-    _searchItems = [NSMutableArray array];
-    int random = arc4random() %10 +1;
-    for (int i=0; i<random; i++) {
-        [_searchItems addObject:@(i)];
+    if (([self.serverName.text length]>0 && [self.serverPort.text length]>0 && [self.countryName.text length]>0 && [self.password.text length]>0)) {
+        
+        NSDictionary *serverDict = @{kServername:self.serverName.text,
+                                     kServerPassword: self.password.text,
+                                     kServerCountry:self.countryName.text,
+                                     kServerPort:self.serverPort.text};
+        
+        IEServersStore *sharedStore = [IEServersStore sharedServersStore];
+        [sharedStore addServerEntryToStore:[serverDict copy]];
+        
+        if ([sharedStore serversList]) {
+            _searchItems = [NSMutableArray array];
+            _searchItems = [[sharedStore serversList]copy];
+        }
+        [self.searchResults reloadData];
     }
-    //reload table data
-    [self.searchResults reloadData];
+    
+//generating random number
+//fillin the searchItems with that
+//    _searchItems = [NSMutableArray array];
+//    int random = arc4random() %10 +1;
+//    for (int i=0; i<random; i++) {
+//        [_searchItems addObject:@(i)];
+//    }
+//    //reload table data
+//    [self.searchResults reloadData];
 }
 @end

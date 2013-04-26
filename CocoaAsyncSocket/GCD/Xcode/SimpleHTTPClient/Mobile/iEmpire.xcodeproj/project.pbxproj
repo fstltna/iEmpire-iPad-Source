@@ -13,6 +13,8 @@
 		7678CF451714FB9E005ED101 /* IEServersSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF441714FB9E005ED101 /* IEServersSearchViewController.m */; };
 		7678CF481714FBBF005ED101 /* IEGamePlayScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF471714FBBF005ED101 /* IEGamePlayScreenViewController.m */; };
 		7678CF4B1714FBD4005ED101 /* IEMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678CF4A1714FBD4005ED101 /* IEMainMenuViewController.m */; };
+		769C961B172A0ABD002335EA /* IEServersStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C961A172A0ABD002335EA /* IEServersStore.m */; };
+		769C961E172A0D35002335EA /* IEServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C961D172A0D35002335EA /* IEServerObject.m */; };
 		A518F1141710DAE300BBCCC2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1131710DAE300BBCCC2 /* CoreImage.framework */; };
 		A518F1161710DAF100BBCCC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1151710DAF100BBCCC2 /* AVFoundation.framework */; };
 		A518F1181710DAFE00BBCCC2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518F1171710DAFE00BBCCC2 /* MediaPlayer.framework */; };
@@ -77,6 +79,10 @@
 		7678CF471714FBBF005ED101 /* IEGamePlayScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEGamePlayScreenViewController.m; sourceTree = "<group>"; };
 		7678CF491714FBD4005ED101 /* IEMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMainMenuViewController.h; sourceTree = "<group>"; };
 		7678CF4A1714FBD4005ED101 /* IEMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEMainMenuViewController.m; sourceTree = "<group>"; };
+		769C9619172A0ABD002335EA /* IEServersStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEServersStore.h; sourceTree = "<group>"; };
+		769C961A172A0ABD002335EA /* IEServersStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEServersStore.m; sourceTree = "<group>"; };
+		769C961C172A0D35002335EA /* IEServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEServerObject.h; sourceTree = "<group>"; };
+		769C961D172A0D35002335EA /* IEServerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEServerObject.m; sourceTree = "<group>"; };
 		A518F11217109DA700BBCCC2 /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proto.h; sourceTree = "<group>"; };
 		A518F1131710DAE300BBCCC2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		A518F1151710DAF100BBCCC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -231,9 +237,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		769C9618172A0A65002335EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				769C9619172A0ABD002335EA /* IEServersStore.h */,
+				769C961A172A0ABD002335EA /* IEServersStore.m */,
+				769C961C172A0D35002335EA /* IEServerObject.h */,
+				769C961D172A0D35002335EA /* IEServerObject.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A59F3DC016EB595200E11CC9 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				769C9618172A0A65002335EA /* Models */,
 				7678CF4C1714FC15005ED101 /* Resources */,
 				7678CF3F1714FB41005ED101 /* Controllers */,
 			);
@@ -475,6 +493,8 @@
 				7678CF481714FBBF005ED101 /* IEGamePlayScreenViewController.m in Sources */,
 				7678CF4B1714FBD4005ED101 /* IEMainMenuViewController.m in Sources */,
 				A59508661716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld in Sources */,
+				769C961B172A0ABD002335EA /* IEServersStore.m in Sources */,
+				769C961E172A0D35002335EA /* IEServerObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
