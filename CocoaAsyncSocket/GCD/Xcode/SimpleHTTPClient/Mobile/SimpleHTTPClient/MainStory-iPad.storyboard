@@ -226,9 +226,9 @@
                     <connections>
                         <outlet property="countryName" destination="FmT-Gh-klf" id="Ecs-Ph-XmG"/>
                         <outlet property="password" destination="iXT-JW-0eK" id="r0z-8y-Ywt"/>
-                        <outlet property="searchResults" destination="JyL-J8-W5w" id="x0I-Yk-7Ho"/>
                         <outlet property="serverName" destination="ujY-2k-OEF" id="SkI-0S-TS5"/>
                         <outlet property="serverPort" destination="IyX-gv-O0a" id="qrJ-2l-QPx"/>
+                        <outlet property="serversTable" destination="JyL-J8-W5w" id="aKU-Sm-u9g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eM-HN-QkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -425,13 +425,16 @@
                 <relationship kind="outlet" name="countryName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="password" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="searchItems" candidateClass="NSMutableArray"/>
-                <relationship kind="outlet" name="searchResults" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="serverName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="serverPort" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="serversTable" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NSMutableArray" superclassName="NSArray">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

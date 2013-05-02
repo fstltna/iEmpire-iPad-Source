@@ -13,8 +13,8 @@
 
 @interface IEServersSearchViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *searchResults;
-@property (strong, nonatomic) IBOutlet NSMutableArray *searchItems;
+@property (weak, nonatomic) IBOutlet UITableView *serversTable;
+@property (strong, nonatomic) NSMutableArray *searchItems;
 @property (nonatomic, weak) UILongPressGestureRecognizer *longReco;
 
 @end
@@ -38,17 +38,17 @@
     
     UILongPressGestureRecognizer *reco = [[UILongPressGestureRecognizer alloc]initWithTarget:self
                                                                                       action:@selector(handleLongPress:)];
-    [self.searchResults addGestureRecognizer:reco];
+    [self.serversTable addGestureRecognizer:reco];
     _longReco = reco;
     
     _searchItems =  [NSMutableArray array];
-    _searchResults.delegate = self;
-    _searchResults.dataSource = self;
-    _searchResults.bounces = NO;
+    _serversTable.delegate = self;
+    _serversTable.dataSource = self;
+    _serversTable.bounces = NO;
     
     IEServersStore *serverStore = [IEServersStore sharedServersStore];
     if ([[serverStore serversList] count]) {
-        _searchItems = [[serverStore serversList] copy];
+        _searchItems = [NSMutableArray arrayWithArray:[serverStore serversList]];
     }
 }
 
@@ -64,11 +64,14 @@
 
     if (reco.state ==UIGestureRecognizerStateBegan) {
 
-        [_searchResults setEditing:YES animated:YES];
+        if (!_serversTable.isEditing) {
+            [_serversTable setEditing:YES animated:YES];
+        }else  [_serversTable setEditing:NO animated:YES];
+
     }
     else if (reco.state == (UIGestureRecognizerStateEnded | UIGestureRecognizerStateCancelled | UIGestureRecognizerStateFailed)){
     
-        [_searchResults setEditing:NO animated:YES];
+        [_serversTable setEditing:NO animated:YES];
     }
 }
 
@@ -113,13 +116,17 @@
 -(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
 
 //    Use this to stop moving of certain rows
+    if ([self.searchItems count] <=1) {
+        return NO;
+    }
+    
     NSLog(@"returning yes...");
     return YES;
 }
 
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
 
-    NSNumber *obj = [[self.searchItems objectAtIndex:[sourceIndexPath row]]copy];
+    NSNumber *obj = [self.searchItems objectAtIndex:[sourceIndexPath row]];
     [self.searchItems removeObjectAtIndex:[sourceIndexPath row]];
     [self.searchItems insertObject:obj atIndex:[destinationIndexPath row]];
     
@@ -143,9 +150,10 @@
     NSLog(@"editing style for row %d is %d",[indexPath row], editingStyle);
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
         [self.searchItems removeObjectAtIndex:[indexPath row]];
         
-        [_searchResults reloadData];
+        [_serversTable reloadData];
     }
 }
 
@@ -164,10 +172,10 @@
         [sharedStore addServerEntryToStore:[serverDict copy]];
         
         if ([sharedStore serversList]) {
-            _searchItems = [NSMutableArray array];
-            _searchItems = [[sharedStore serversList]copy];
+//            _searchItems = [NSMutableArray array];
+            _searchItems = [NSMutableArray arrayWithArray:[sharedStore serversList]] ;
         }
-        [self.searchResults reloadData];
+        [_serversTable reloadData];
     }
     
 //generating random number

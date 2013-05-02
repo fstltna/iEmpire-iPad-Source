@@ -63,7 +63,7 @@
 -(NSArray *)serversList{
 
     if ([_serversDict count]) {
-        return [_serversDict allValues];
+        return [[_serversDict allValues]copy];
     }
     return nil;
 }
