@@ -31,6 +31,9 @@
 		A538AD1A1702BDA7000F43B9 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A538AD191702BDA7000F43B9 /* iVersion.m */; };
 		A538AD1F1702D258000F43B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538AD1E1702D258000F43B9 /* QuartzCore.framework */; };
 		A538AD2A17033CFE000F43B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538AD2917033CFE000F43B9 /* SystemConfiguration.framework */; };
+		A54284F1173B9AFC008030E4 /* ServersButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A54284F0173B9AFC008030E4 /* ServersButton.png */; };
+		A54284F3173B9C07008030E4 /* CreditsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A54284F2173B9C07008030E4 /* CreditsButton.png */; };
+		A54284F5173B9D20008030E4 /* ConnectButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A54284F4173B9D20008030E4 /* ConnectButton.png */; };
 		A575A68B171BEED900911E52 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A575A68A171BEED900911E52 /* Settings.bundle */; };
 		A59508661716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A59508641716C1B000BF2199 /* iEmpireDataModel.xcdatamodeld */; };
 		A59F3DC316EB595C00E11CC9 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59F3DC116EB595C00E11CC9 /* MainWindow-iPad.xib */; };
@@ -99,6 +102,9 @@
 		A538AD191702BDA7000F43B9 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		A538AD1E1702D258000F43B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A538AD2917033CFE000F43B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A54284F0173B9AFC008030E4 /* ServersButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ServersButton.png; sourceTree = "<group>"; };
+		A54284F2173B9C07008030E4 /* CreditsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CreditsButton.png; sourceTree = "<group>"; };
+		A54284F4173B9D20008030E4 /* ConnectButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ConnectButton.png; sourceTree = "<group>"; };
 		A575A68A171BEED900911E52 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A59508651716C1B000BF2199 /* iEmpireDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iEmpireDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A59C7A10171BF5170076383A /* GlobalsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalsHeader.h; sourceTree = "<group>"; };
@@ -336,6 +342,9 @@
 		DC80CA3F13C3B43F00D29D06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A54284F4173B9D20008030E4 /* ConnectButton.png */,
+				A54284F2173B9C07008030E4 /* CreditsButton.png */,
+				A54284F0173B9AFC008030E4 /* ServersButton.png */,
 				A518F1191710E65C00BBCCC2 /* theme_song00.mp3 */,
 				A5A2846F1703490100C2DB01 /* MarqueeLabel.h */,
 				A5A284701703490100C2DB01 /* MarqueeLabel.m */,
@@ -453,6 +462,9 @@
 				A5DE66661718FD8A003ADAC4 /* twitterBtn@2x.png in Resources */,
 				A5DE66681718FE82003ADAC4 /* Credits_Screen.png in Resources */,
 				A575A68B171BEED900911E52 /* Settings.bundle in Resources */,
+				A54284F1173B9AFC008030E4 /* ServersButton.png in Resources */,
+				A54284F3173B9C07008030E4 /* CreditsButton.png in Resources */,
+				A54284F5173B9D20008030E4 /* ConnectButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
