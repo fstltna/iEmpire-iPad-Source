@@ -139,7 +139,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	NSError *error = nil;
 	NSString *host = HOST;
 	
-	uint16_t port = 80;  // HTTP
+	uint16_t port = 6665;  // HTTP
 	
 	if (![asyncSocket connectToHost:host onPort:port error:&error])
 	{
