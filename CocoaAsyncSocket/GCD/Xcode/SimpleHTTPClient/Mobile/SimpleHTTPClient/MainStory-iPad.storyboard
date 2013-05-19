@@ -422,32 +422,6 @@
         <image name="blue-neon-cityscape.png" width="768" height="1024"/>
         <image name="twitterBtn.png" width="75" height="75"/>
     </resources>
-    <classes>
-        <class className="IEGamePlayScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IEGamePlayScreenViewController.h"/>
-        </class>
-        <class className="IEMainMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IEMainMenuViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="tweetTapped:"/>
-                <relationship kind="outlet" name="newsLabel" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="IEServersSearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IEServersSearchViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="connectPressed:"/>
-                <relationship kind="outlet" name="countryName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="serverName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="serverPort" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="serversTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
