@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IEGamePlayScreenViewController : UIViewController
+NSInputStream *inputStream;
+NSOutputStream *outputStream;
+
+@interface IEGamePlayScreenViewController : UIViewController <NSStreamDelegate>
 
 @end
