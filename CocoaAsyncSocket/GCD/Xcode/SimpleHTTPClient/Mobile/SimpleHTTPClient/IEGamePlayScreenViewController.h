@@ -12,5 +12,6 @@ NSInputStream *inputStream;
 NSOutputStream *outputStream;
 
 @interface IEGamePlayScreenViewController : UIViewController <NSStreamDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *chatTextView;
 
 @end

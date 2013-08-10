@@ -172,10 +172,19 @@
         [sharedStore addServerEntryToStore:[serverDict copy]];
         
         if ([sharedStore serversList]) {
-//            _searchItems = [NSMutableArray array];
+
             _searchItems = [NSMutableArray arrayWithArray:[sharedStore serversList]] ;
         }
         [_serversTable reloadData];
+
+
+        //Currently it initializes the PlayScreen asuming the connection will be a success.
+        //TODO: Make the connection call and then handle the error appropriately(if need be here or on the playScreen)
+        IEGamePlayScreenViewController *gamePlayCtrl = [[UIStoryboard storyboardWithName:@"MainStory-iPad" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"iEGamePlay"];
+        
+        [self presentViewController:gamePlayCtrl
+                           animated:YES
+                         completion:NULL];
     }
     
 //generating random number

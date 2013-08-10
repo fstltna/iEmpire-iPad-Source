@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A4A8B09F-1D2E-4F0E-84C9-FFCC54149104</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iEmpire</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6BB7D1E9-912E-4BA8-97FE-F4D2543061D6</key>
+		<string>ssh://ddk8242.github.com/fstltna/iEmpire-iPad-Source.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CocoaAsyncSocket/GCD/Xcode/SimpleHTTPClient/Mobile/iEmpire.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6BB7D1E9-912E-4BA8-97FE-F4D2543061D6</key>
+		<string>../../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://ddk8242.github.com/fstltna/iEmpire-iPad-Source.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6BB7D1E9-912E-4BA8-97FE-F4D2543061D6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6BB7D1E9-912E-4BA8-97FE-F4D2543061D6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iEmpire-iPad-Source</string>
+		</dict>
+	</array>
+</dict>
+</plist>

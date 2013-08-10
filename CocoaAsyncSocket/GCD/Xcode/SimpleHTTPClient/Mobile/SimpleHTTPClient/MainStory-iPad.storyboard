@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pd5-Cg-FyF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pd5-Cg-FyF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -297,9 +297,11 @@
                                     <constraint firstAttribute="height" constant="680" id="RiR-8y-xgW"/>
                                     <constraint firstAttribute="width" constant="757" id="XtE-NT-TBg"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XLo-ZJ-ytz" id="wOK-qg-cWN"/>
+                                </connections>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocC-ps-eV3">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -407,6 +409,9 @@
                             <constraint firstItem="40w-Za-SCn" firstAttribute="leading" secondItem="KBQ-SR-IL4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="y4s-cT-WTA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chatTextView" destination="Ymy-33-vkX" id="0iC-e6-TEC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBR-br-Faw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -422,13 +427,42 @@
         <image name="blue-neon-cityscape.png" width="768" height="1024"/>
         <image name="twitterBtn.png" width="75" height="75"/>
     </resources>
+    <classes>
+        <class className="IEGamePlayScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IEGamePlayScreenViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chatTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="IEMainMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IEMainMenuViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tweetTapped:"/>
+                <relationship kind="outlet" name="newsLabel" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="IEServersSearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IEServersSearchViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="connectPressed:"/>
+                <relationship kind="outlet" name="countryName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="serverName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="serverPort" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="serversTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="u5d-f7-XAF"/>
         <segue reference="G2l-OX-zcB"/>
-        <segue reference="RVU-YE-Eeh"/>
     </inferredMetricsTieBreakers>
 </document>

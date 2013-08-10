@@ -46,7 +46,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     audioPlayer = audioP;
     [audioPlayer prepareToPlay];
-    
+ /*
     if (!musicError && audioPlayer) {
 
         if(WantMusic)
@@ -66,7 +66,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         NSLog(@"error while trying to play music is %@", [musicError debugDescription]);
     }
 
-    
+ */   
     
     
 	// AsyncSocket optionally uses the Lumberjack logging framework.
