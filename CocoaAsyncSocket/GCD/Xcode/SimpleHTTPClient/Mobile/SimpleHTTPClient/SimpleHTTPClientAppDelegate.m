@@ -46,7 +46,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     audioPlayer = audioP;
     [audioPlayer prepareToPlay];
- /*
+
     if (!musicError && audioPlayer) {
 
         if(WantMusic)
@@ -66,7 +66,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         NSLog(@"error while trying to play music is %@", [musicError debugDescription]);
     }
 
- */   
     
     
 	// AsyncSocket optionally uses the Lumberjack logging framework.
@@ -149,7 +148,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	{
 		DDLogVerbose(@"Connecting to \"%@\" on port %hu...", host, port);
 	}
-	
+/* ==== InitIAP*/
+    if(![IAPShare sharedHelper].iap) {
+        NSSet* dataSet = [[NSSet alloc] initWithObjects:@"com.pocketfiction.iempire.inapp", nil];
+        
+        [IAPShare sharedHelper].iap = [[IAPHelper alloc] initWithProductIdentifiers:dataSet];
+    }
+/* */
 	// Normal iOS stuff...
 	
 	//self.window.rootViewController = self.viewController;
