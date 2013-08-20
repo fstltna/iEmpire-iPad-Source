@@ -149,7 +149,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	{
 		DDLogVerbose(@"Connecting to \"%@\" on port %hu...", host, port);
 	}
-    // ==== InitIAP
+    // ==== XYZ Init IAP
     if(![IAPShare sharedHelper].iap) {
         NSSet* dataSet = [[NSSet alloc] initWithObjects:@"com.pocketfiction.iempire.inapp", nil];
         
@@ -190,7 +190,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
                                                 NSLog(@"Fail");
                                             }
                                         }];//end of buy product
-         }
+         } // === XYZ IAP End
      }];
     
 	// Normal iOS stuff...
