@@ -55,7 +55,7 @@
 }
 
 - (void)requestProductsWithCompletion:(IAPProductsResponseBlock)completion {
-    
+    NSLog(@"Product identifiers: %@", _productIdentifiers);
     self.request = [[SKProductsRequest alloc] initWithProductIdentifiers:_productIdentifiers];
     _request.delegate = self;
     self.requestProductsBlock = completion;
@@ -65,7 +65,7 @@
 }
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
-    
+    NSLog(@"Response objects: %@", response.products);
     self.products = response.products;
     self.request = nil;
 

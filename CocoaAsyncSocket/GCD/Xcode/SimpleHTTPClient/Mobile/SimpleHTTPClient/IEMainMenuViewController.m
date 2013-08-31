@@ -9,6 +9,7 @@
 #import "IEMainMenuViewController.h"
 #import <Twitter/Twitter.h>
 #import "GlobalsHeader.h"
+#import "IAPShare.h"
 
 @interface IEMainMenuViewController ()
 
@@ -52,6 +53,13 @@
     
     // Put Label Update Code Here
     [_newsLabel setText:theiEmpireString];
+    
+    // Check IAP and disable the button if it's already purchased
+    BOOL isIAPPurchased = [[IAPShare sharedHelper].iap isPurchasedProductsIdentifier:@"InApp"];
+    
+    if (isIAPPurchased) {
+        [self hideUnlockFeaturesButton];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,6 +103,45 @@
     }    
 }
 
-#pragma mark -
+#pragma mark - IAP
+
+- (IBAction)unlockFeatures:(id)sender {
+    NSLog(@"ITEMS :%@", [IAPShare sharedHelper].iap.productIdentifiers);
+    [[IAPShare sharedHelper].iap requestProductsWithCompletion:^(SKProductsRequest* request,SKProductsResponse* response)
+     {
+         if(response > 0 ) {
+             NSLog(@"PRODUCTS: %@", [IAPShare sharedHelper].iap.products);
+             if ([[IAPShare sharedHelper].iap.products count] != 0) {
+                 SKProduct* product =[[IAPShare sharedHelper].iap.products objectAtIndex:0];
+                 
+                 [[IAPShare sharedHelper].iap buyProduct:product
+                                            onCompletion:^(SKPaymentTransaction* trans){
+                                                
+                                                if(trans.error)
+                                                {
+                                                    NSLog(@"Fail %@",[trans.error localizedDescription]);
+                                                }
+                                                else if(trans.transactionState == SKPaymentTransactionStatePurchased) {
+                                                    
+                                                    [[IAPShare sharedHelper].iap provideContent:@"InApp"];
+                                                    NSLog(@"SUCCESS %@",response);
+                                                    NSLog(@"Purchases %@",[IAPShare sharedHelper].iap.purchasedProducts);
+                                                    
+                                                    [self hideUnlockFeaturesButton];
+                                                    
+                                                }
+                                                else if(trans.transactionState == SKPaymentTransactionStateFailed) {
+                                                    NSLog(@"Fail");
+                                                }
+                                            }];//end of buy product
+             }
+         }
+     }];
+}
+
+- (void)hideUnlockFeaturesButton
+{
+    self.unlockFeaturesButton.hidden = YES;
+}
 
 @end

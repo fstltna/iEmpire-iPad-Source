@@ -25,7 +25,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.pocketfiction.${PRODUCT_NAME:rfc1034identifier}HD</string>
+	<string>com.pocketfiction.iempire</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

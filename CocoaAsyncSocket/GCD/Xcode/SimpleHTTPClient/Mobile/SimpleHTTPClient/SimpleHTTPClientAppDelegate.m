@@ -4,10 +4,10 @@
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "DispatchQueueLogFormatter.h"
+#import "IAPShare.h"
 
 #import <CoreAudio/CoreAudioTypes.h>
 #import "GlobalsHeader.h"
-#import "IAPShare.h"
 
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -149,6 +149,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	{
 		DDLogVerbose(@"Connecting to \"%@\" on port %hu...", host, port);
 	}
+    
+    // Init IAP
+    NSSet* dataSet = [[NSSet alloc] initWithObjects:@"com.pocketfiction.iempire.inapp", nil];
+    [IAPShare sharedHelper].iap = [[IAPHelper alloc] initWithProductIdentifiers:dataSet];
+    [IAPShare sharedHelper].iap.production = NO;
+        
 	// Normal iOS stuff...
 	
 	//self.window.rootViewController = self.viewController;
