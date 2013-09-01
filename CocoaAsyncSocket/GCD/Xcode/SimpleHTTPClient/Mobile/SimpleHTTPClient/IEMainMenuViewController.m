@@ -10,6 +10,7 @@
 #import <Twitter/Twitter.h>
 #import "GlobalsHeader.h"
 #import "IAPShare.h"
+#import "KxMenu.h"
 
 @interface IEMainMenuViewController ()
 
@@ -105,7 +106,28 @@
 
 #pragma mark - IAP
 
-- (IBAction)unlockFeatures:(id)sender {
+- (IBAction)unlockFeatures:(UIButton*)sender {
+    NSArray *menuItems =
+    @[
+      
+      [KxMenuItem menuItem:@"Purchase"
+                     image:nil
+                    target:self
+                    action:@selector(purchaseFeature)],
+      
+      [KxMenuItem menuItem:@"Restore"
+                     image:nil
+                    target:self
+                    action:@selector(restorePurchases)],
+      ];
+    
+    [KxMenu showMenuInView:self.view
+                  fromRect:sender.frame
+                 menuItems:menuItems];
+}
+
+- (void)purchaseFeature
+{
     NSLog(@"ITEMS :%@", [IAPShare sharedHelper].iap.productIdentifiers);
     [[IAPShare sharedHelper].iap requestProductsWithCompletion:^(SKProductsRequest* request,SKProductsResponse* response)
      {
@@ -129,6 +151,10 @@
                                                     
                                                     [self hideUnlockFeaturesButton];
                                                     
+                                                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success!" message:[NSString stringWithFormat:@"You have successfully purchased %@", product.localizedTitle] delegate:nil cancelButtonTitle:@"OK!" otherButtonTitles: nil];
+                                                    
+                                                    [alert show];
+                                                    
                                                 }
                                                 else if(trans.transactionState == SKPaymentTransactionStateFailed) {
                                                     NSLog(@"Fail");
@@ -137,6 +163,15 @@
              }
          }
      }];
+}
+
+- (void)restorePurchases
+{
+    [[IAPShare sharedHelper].iap restoreProductsWithCompletion:^(SKPaymentQueue *payment, NSError *error) {
+        if (error) {
+            NSLog(@"ERROR:%@", error.localizedDescription);
+        }
+    }];
 }
 
 - (void)hideUnlockFeaturesButton

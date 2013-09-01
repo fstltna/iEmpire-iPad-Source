@@ -51,6 +51,7 @@
 		A5FF53051744EDC800F7BC05 /* ServersButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FF53021744EDC800F7BC05 /* ServersButton@2x.png */; };
 		A5FF53061744EDC800F7BC05 /* CreditsButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FF53031744EDC800F7BC05 /* CreditsButton@2x.png */; };
 		A5FF53071744EDC800F7BC05 /* ConnectButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FF53041744EDC800F7BC05 /* ConnectButton@2x.png */; };
+		B93FF75917D1F24E009F49C0 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B93FF75817D1F24E009F49C0 /* KxMenu.m */; };
 		B947585317D0F12A00533DBE /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B947584E17D0F12A00533DBE /* IAPHelper.m */; };
 		B947585417D0F12A00533DBE /* IAPShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B947585017D0F12A00533DBE /* IAPShare.m */; };
 		B947585517D0F12A00533DBE /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B947585217D0F12A00533DBE /* NSString+Base64.m */; };
@@ -133,6 +134,8 @@
 		A5FF53021744EDC800F7BC05 /* ServersButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ServersButton@2x.png"; sourceTree = "<group>"; };
 		A5FF53031744EDC800F7BC05 /* CreditsButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CreditsButton@2x.png"; sourceTree = "<group>"; };
 		A5FF53041744EDC800F7BC05 /* ConnectButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ConnectButton@2x.png"; sourceTree = "<group>"; };
+		B93FF75717D1F24E009F49C0 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		B93FF75817D1F24E009F49C0 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 		B947584D17D0F12A00533DBE /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
 		B947584E17D0F12A00533DBE /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
 		B947584F17D0F12A00533DBE /* IAPShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPShare.h; sourceTree = "<group>"; };
@@ -279,6 +282,15 @@
 			name = iPad;
 			sourceTree = "<group>";
 		};
+		B93FF75A17D1F255009F49C0 /* KxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B93FF75717D1F24E009F49C0 /* KxMenu.h */,
+				B93FF75817D1F24E009F49C0 /* KxMenu.m */,
+			);
+			name = KxMenu;
+			sourceTree = "<group>";
+		};
 		B947584C17D0F12A00533DBE /* IAPHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +333,7 @@
 				A538ACBA1701137D000F43B9 /* LoadPage.png */,
 				A5E0F0B0174859BD0021B009 /* TitleLogo@2x.png */,
 				A538ACB417010823000F43B9 /* TitleLogo.png */,
+				B93FF75A17D1F255009F49C0 /* KxMenu */,
 				B947584C17D0F12A00533DBE /* IAPHelper */,
 				DC80CA5813C3B44900D29D06 /* Logging */,
 				DC80CA6813C3B47300D29D06 /* TCP */,
@@ -545,6 +558,7 @@
 				B947585317D0F12A00533DBE /* IAPHelper.m in Sources */,
 				B947585417D0F12A00533DBE /* IAPShare.m in Sources */,
 				B947585517D0F12A00533DBE /* NSString+Base64.m in Sources */,
+				B93FF75917D1F24E009F49C0 /* KxMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
