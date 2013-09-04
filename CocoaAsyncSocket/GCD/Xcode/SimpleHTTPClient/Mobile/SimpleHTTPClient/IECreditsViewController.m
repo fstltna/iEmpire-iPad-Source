@@ -50,21 +50,21 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
-    NSString *strToUse;
+//    NSString *strToUse;
     if ([segue.identifier isEqualToString:SEGUE_IEMPIRE]) {
-        strToUse = SEGUE_IEMPIRE_LINK;
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SEGUE_IEMPIRE_LINK]];
     }
     else if ([segue.identifier isEqualToString:SEGUE_MARISA]){
-        strToUse = SEGUE_MARISA_LINK;
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SEGUE_MARISA_LINK]];
     }
     else if ([segue.identifier isEqualToString:SEGUE_VEDRAN]){
-        strToUse = SEGUE_VEDRAN_LINK;
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SEGUE_VEDRAN_LINK]];
     }
     else if ([segue.identifier isEqualToString:SEGUE_DHAVAL]){
-        strToUse = SEGUE_DHAVAL_LINK;
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SEGUE_DHAVAL_LINK]];
     }
-    
-    [(IECreditsInfoViewController *)[segue destinationViewController] setUrlString:[strToUse copy]];
+//   [(IECreditsInfoViewController *)[segue destinationViewController] setUrlString:[strToUse copy]];
+//   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.google.com"]];
 }
 
 @end
