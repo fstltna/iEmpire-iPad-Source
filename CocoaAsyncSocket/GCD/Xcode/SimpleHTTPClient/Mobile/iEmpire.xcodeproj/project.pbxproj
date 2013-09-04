@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763BBA8817D671DE008D15A9 /* IECreditsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763BBA8717D671DE008D15A9 /* IECreditsInfoViewController.m */; };
+		763BBA8B17D6D75A008D15A9 /* IECreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763BBA8A17D6D75A008D15A9 /* IECreditsViewController.m */; };
 		765E86DF17185CC300D755E2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765E86DE17185CC300D755E2 /* Social.framework */; };
 		765E86E717185F0800D755E2 /* twitterBtn-keep.png in Resources */ = {isa = PBXBuildFile; fileRef = 765E86E517185F0800D755E2 /* twitterBtn-keep.png */; };
 		765E86E817185F0800D755E2 /* twitterBtn-keep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 765E86E617185F0800D755E2 /* twitterBtn-keep@2x.png */; };
@@ -81,6 +83,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		763BBA8617D671DE008D15A9 /* IECreditsInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IECreditsInfoViewController.h; sourceTree = "<group>"; };
+		763BBA8717D671DE008D15A9 /* IECreditsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IECreditsInfoViewController.m; sourceTree = "<group>"; };
+		763BBA8917D6D75A008D15A9 /* IECreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IECreditsViewController.h; sourceTree = "<group>"; };
+		763BBA8A17D6D75A008D15A9 /* IECreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IECreditsViewController.m; sourceTree = "<group>"; };
 		765E86DC17185C5A00D755E2 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		765E86DE17185CC300D755E2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		765E86E517185F0800D755E2 /* twitterBtn-keep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterBtn-keep.png"; sourceTree = "<group>"; };
@@ -207,6 +213,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		763BBA8517D671A7008D15A9 /* CreditsInfo */ = {
+			isa = PBXGroup;
+			children = (
+				763BBA8617D671DE008D15A9 /* IECreditsInfoViewController.h */,
+				763BBA8717D671DE008D15A9 /* IECreditsInfoViewController.m */,
+			);
+			name = CreditsInfo;
+			sourceTree = "<group>";
+		};
+		763BBA8C17D6D75F008D15A9 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				763BBA8917D6D75A008D15A9 /* IECreditsViewController.h */,
+				763BBA8A17D6D75A008D15A9 /* IECreditsViewController.m */,
+			);
+			name = Credits;
+			sourceTree = "<group>";
+		};
 		765E86E017185E2F00D755E2 /* Twitter Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +245,8 @@
 		7678CF3F1714FB41005ED101 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				763BBA8C17D6D75F008D15A9 /* Credits */,
+				763BBA8517D671A7008D15A9 /* CreditsInfo */,
 				7678CF421714FB77005ED101 /* ServersSearch */,
 				7678CF411714FB5E005ED101 /* GamePlayScreen */,
 				7678CF401714FB56005ED101 /* MainMenu */,
@@ -567,6 +593,8 @@
 				B947585417D0F12A00533DBE /* IAPShare.m in Sources */,
 				B947585517D0F12A00533DBE /* NSString+Base64.m in Sources */,
 				B93FF75917D1F24E009F49C0 /* KxMenu.m in Sources */,
+				763BBA8817D671DE008D15A9 /* IECreditsInfoViewController.m in Sources */,
+				763BBA8B17D6D75A008D15A9 /* IECreditsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
