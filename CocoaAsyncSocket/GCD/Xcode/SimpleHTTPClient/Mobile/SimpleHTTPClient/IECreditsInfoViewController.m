@@ -6,10 +6,15 @@
 //
 //
 
+
 #import "IECreditsInfoViewController.h"
 
-@interface IECreditsInfoViewController ()
+@interface IECreditsInfoViewController () <UIActionSheetDelegate>
+
+@property (nonatomic, weak) UIActionSheet *actionSheet;
 -(IBAction)donePressed:(id)sender;
+-(IBAction)actionPressed:(id)sender;
+
 @end
 
 @implementation IECreditsInfoViewController
@@ -34,7 +39,31 @@
 
 -(IBAction)donePressed:(id)sender{
 
+    [self.actionSheet removeFromSuperview];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(IBAction)actionPressed:(id)sender{
+
+    if (!self.actionSheet) {
+
+        UIActionSheet *alertSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:(self) cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Cancel" otherButtonTitles:@"Open link In Safari", nil];
+        [alertSheet setTag:0];
+        [alertSheet setDelegate:self];
+        [alertSheet showFromBarButtonItem:self.actionBarButton
+                                 animated:YES];
+        
+    }
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.urlString]];
+    }
+    else
+        [self.actionSheet removeFromSuperview];
+
 }
 
 @end

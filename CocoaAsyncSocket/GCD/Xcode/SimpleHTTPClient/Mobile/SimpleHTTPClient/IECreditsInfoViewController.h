@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface IECreditsInfoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *actionBarButton;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (weak, nonatomic) IBOutlet UIWebView *infoWebView;
 @property (nonatomic, copy) NSString *urlString;
 @end
